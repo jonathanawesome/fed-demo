@@ -1,0 +1,9 @@
+{
+  "name": "@fed-demo/reviews",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "grafbase dev --port 4103",
+    "start": "grafbase start"
+  }
+}

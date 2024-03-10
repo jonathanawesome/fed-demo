@@ -1,0 +1,9 @@
+{
+  "name": "@fed-demo/gateway",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "grafbase dev --port 4101",
+    "start": "grafbase start"
+  }
+}
