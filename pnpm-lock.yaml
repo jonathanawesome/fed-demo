@@ -8,15 +8,9 @@ importers:
 
   .:
     devDependencies:
-      '@grafbase/sdk':
-        specifier: ^0.18.0
-        version: 0.18.0
       '@graphql-yoga/plugin-defer-stream':
         specifier: ^3.1.1
         version: 3.1.1(graphql-yoga@5.1.1)(graphql@16.8.1)
-      grafbase:
-        specifier: ^0.60.0
-        version: 0.60.0
       graphql:
         specifier: ^16.8.1
         version: 16.8.1
@@ -36,15 +30,32 @@ importers:
         specifier: ^5.4.2
         version: 5.4.2
 
-  apps/gateway: {}
+  apps/gateway:
+    devDependencies:
+      '@grafbase/sdk':
+        specifier: ^0.18.0
+        version: 0.18.0
+      grafbase:
+        specifier: ^0.58.0
+        version: 0.58.1
 
   apps/products:
     devDependencies:
       '@grafbase/sdk':
         specifier: ^0.18.0
         version: 0.18.0
+      grafbase:
+        specifier: ^0.58.0
+        version: 0.58.1
 
-  apps/reviews: {}
+  apps/reviews:
+    devDependencies:
+      '@grafbase/sdk':
+        specifier: ^0.18.0
+        version: 0.18.0
+      grafbase:
+        specifier: ^0.58.0
+        version: 0.58.1
 
 packages:
 
@@ -70,24 +81,24 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@grafbase/cli-aarch64-apple-darwin@0.60.0:
-    resolution: {integrity: sha512-I/0KU7iEWDsInGQ3BY8wH7A2DDZPaNo7/l5jLBboQQ7mTdyzJHl8vRjXpP2wNd8b0ngY8BBOz9+xoYvW5flQbA==}
+  /@grafbase/cli-aarch64-apple-darwin@0.58.1:
+    resolution: {integrity: sha512-vdixwajBUzbOdQGPynr0HjbI9i34i4wDIjyACAWWzxzBnPklT4wi4Us9Sym23Zri/wYBMdbbn1Zjb6WYKLXvVA==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@grafbase/cli-aarch64-unknown-linux-musl@0.60.0:
-    resolution: {integrity: sha512-dlfhAtLhEC44ARo2i0ocFcz6/QyCudxM8zTL/50KiM9ufNjJWMLpFE9TAkkrY5RnpGX8EDDeLdKIc9v1RBAYnA==}
+  /@grafbase/cli-aarch64-unknown-linux-musl@0.58.1:
+    resolution: {integrity: sha512-qA4qNqH5vs/rKvBkb+MUsx21iCh7Hd+uoT3uL6dGtF5OK5Vp9FW/K9UlY7vS4Qr8PPbad+2c7sDn12lYskq/TQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /@grafbase/cli-x86_64-apple-darwin@0.60.0:
-    resolution: {integrity: sha512-0irPwRoAQxSlygAsaqnrePoYBGph4LyNLCQkwj20qLhWzTQOyY5hgRgXMxaM7gLb3MzMBdKez9ZyBdmPkXLW3A==}
+  /@grafbase/cli-x86_64-apple-darwin@0.58.1:
+    resolution: {integrity: sha512-pZeuTbrMieQ8ePz8Fx59iuImPWxpHs09waF4ejzfM8Ia/AEHoIsqsuui23vJMAr2ioiS9LFvP0XhnSYk0r55Zw==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
@@ -102,8 +113,8 @@ packages:
     dev: true
     optional: true
 
-  /@grafbase/cli-x86_64-unknown-linux-musl@0.60.0:
-    resolution: {integrity: sha512-hNd1vCFgMrtBwNROuq78W2P4rwqIlXmyyGwUbLUZ+7AmZ3Zul9fmq1y+xLDn13MQgNVfDcjwJNwRVQXKA12saw==}
+  /@grafbase/cli-x86_64-unknown-linux-musl@0.58.1:
+    resolution: {integrity: sha512-lJYM8yLRNcidcxYiuPQDlsfYAAAzpWna1813zhll8X/9rJxp1f4iotL1GEFr7TWAf8Bmj1VtSauHmYLYrSYaHQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
@@ -350,16 +361,16 @@ packages:
       fast-decode-uri-component: 1.0.1
     dev: true
 
-  /grafbase@0.60.0:
-    resolution: {integrity: sha512-yaX6R36o04jxtOuc8maXqLGn2PezMxeToRCbPFp5NIeJYibmmZM0/O6kYi/ak/1v1dW3tFc70Qfx2n+1U4VZtg==}
+  /grafbase@0.58.1:
+    resolution: {integrity: sha512-EXwN7x+ILtWukfW53CUsNNs10Jxava76rwuR9ySmHNTh4UTG50McPQzj03l/yFhWSoZMbnPuRovOU2vJkOVtsw==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@grafbase/cli-aarch64-apple-darwin': 0.60.0
-      '@grafbase/cli-aarch64-unknown-linux-musl': 0.60.0
-      '@grafbase/cli-x86_64-apple-darwin': 0.60.0
+      '@grafbase/cli-aarch64-apple-darwin': 0.58.1
+      '@grafbase/cli-aarch64-unknown-linux-musl': 0.58.1
+      '@grafbase/cli-x86_64-apple-darwin': 0.58.1
       '@grafbase/cli-x86_64-pc-windows-msvc': 0.53.0
-      '@grafbase/cli-x86_64-unknown-linux-musl': 0.60.0
+      '@grafbase/cli-x86_64-unknown-linux-musl': 0.58.1
     dev: true
 
   /graphql-yoga@5.1.1(graphql@16.8.1):

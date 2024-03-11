@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "grafbase dev --port 4102",
-    "start": "grafbase start"
+    "dev": "grafbase dev --port 4001",
+    "start": "grafbase start",
+    "publish:dev": "grafbase publish --dev --name fed-demo-products --url http://localhost:4001/graphql"
+  },
+  "devDependencies": {
+    "@grafbase/sdk": "^0.18.0",
+    "grafbase": "^0.58.0"
   }
 }
