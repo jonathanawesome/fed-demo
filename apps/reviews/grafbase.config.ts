@@ -35,6 +35,11 @@ g.query('reviewsByRating', {
 
 export default config({
   graph: g,
+  auth: {
+    rules: (rules) => {
+      rules.public();
+    },
+  },
   experimental: {
     codegen: true,
   },

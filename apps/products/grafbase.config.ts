@@ -24,6 +24,11 @@ g.query('products', {
 
 export default config({
   graph: g,
+  auth: {
+    rules: (rules) => {
+      rules.public();
+    },
+  },
   experimental: {
     codegen: true,
   },
