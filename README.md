@@ -1,6 +1,6 @@
 ## Grafbase Federation Demo
 
-This monorepo contains a federated graph composed of Products and Reviews subgraphs.
+This monorepo contains a federated graph composed of Products, Reviews, and Users subgraphs.
 
 ### Get started
 
