@@ -1,9 +1,9 @@
 import { Resolver } from '@grafbase/generated';
 
-import { productsData } from '../data';
+import { productsData } from '../productsData';
 
 const resolver: Resolver['Query.product'] = (_parent, args, _context) => {
-  const product = productsData.find((rev) => rev.id === args.productId);
+  const product = productsData.find((product) => product.id === args.productId);
   return product;
 };
 
