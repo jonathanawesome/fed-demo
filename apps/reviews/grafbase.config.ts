@@ -15,16 +15,13 @@ const review = g
     content: g.string(),
     id: g.id(),
     rating: g.enumRef(ratingEnum),
-    // product: g.ref(product),
   })
   .key('id');
 
-const product = g
-  .type('Product', {
-    id: g.id(),
-    reviews: g.ref(review).list().resolver('reviewsByProduct'),
-  })
-  .key('id');
+g.type('Product', {
+  id: g.id(),
+  reviews: g.ref(review).list().resolver('reviewsByProduct'),
+}).key('id');
 
 g.query('review', {
   args: { reviewId: g.id() },
