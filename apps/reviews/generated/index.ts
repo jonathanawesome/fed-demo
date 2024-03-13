@@ -12,11 +12,16 @@
 //  }
 
 export type Schema = {
+  'Product': {
+    __typename?: 'Product';
+    id: string;
+    reviews?: Array<Schema['Review']>;
+  };
   'Query': {
     __typename?: 'Query';
     review?: Schema['Review'];
     reviews?: Array<Schema['Review']>;
-    reviewsByRating?: Array<Schema['Review']>;
+    reviewsByProduct?: Array<Schema['Review']>;
   };
   'Rating': | 'POOR'| 'LESS_THAN_NEUTRAL'| 'NEUTRAL'| 'LESS_THAN_EXCELLENT'| 'EXCELLENT';
   'Review': {
@@ -30,8 +35,9 @@ export type Schema = {
 import { ResolverFn } from '@grafbase/sdk'
 
 export type Resolver = {
+  'Product.reviews': ResolverFn<Schema['Product'], {  }, Array<Schema['Review']>>
   'Query.review': ResolverFn<Schema['Query'], { reviewId: string,  }, Schema['Review']>
   'Query.reviews': ResolverFn<Schema['Query'], {  }, Array<Schema['Review']>>
-  'Query.reviewsByRating': ResolverFn<Schema['Query'], { rating: Schema['Rating'],  }, Array<Schema['Review']>>
+  'Query.reviewsByProduct': ResolverFn<Schema['Query'], { productId: string,  }, Array<Schema['Review']>>
 }
 

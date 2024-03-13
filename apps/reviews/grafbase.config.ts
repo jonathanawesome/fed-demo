@@ -1,4 +1,4 @@
-import { config, graph, scalar } from '@grafbase/sdk';
+import { config, graph } from '@grafbase/sdk';
 
 const g = graph.Standalone({ subgraph: true });
 
@@ -10,14 +10,22 @@ const ratingEnum = g.enum('Rating', [
   'EXCELLENT',
 ]);
 
-const review = g.type('Review', {
-  content: g.string(),
-  id: scalar.id(),
-  rating: g.enumRef(ratingEnum),
-});
+const review = g
+  .type('Review', {
+    content: g.string(),
+    id: g.id(),
+    rating: g.enumRef(ratingEnum),
+    // product: g.ref(product),
+  })
+  .key('id');
+
+g.type('Product', {
+  id: g.id(),
+  reviews: g.ref(review).list().resolver('reviewsByProduct'),
+}).key('id');
 
 g.query('review', {
-  args: { reviewId: scalar.id() },
+  args: { reviewId: g.id() },
   returns: g.ref(review),
   resolver: 'review',
 });
@@ -27,14 +35,19 @@ g.query('reviews', {
   resolver: 'reviews',
 });
 
-g.query('reviewsByRating', {
-  args: { rating: g.enumRef(ratingEnum) },
+g.query('reviewsByProduct', {
+  args: { productId: g.id() },
   returns: g.ref(review).list(),
-  resolver: 'reviewsByRating',
+  resolver: 'reviewsByProduct',
 });
 
 export default config({
   graph: g,
+  auth: {
+    rules: (rules) => {
+      rules.public();
+    },
+  },
   experimental: {
     codegen: true,
   },

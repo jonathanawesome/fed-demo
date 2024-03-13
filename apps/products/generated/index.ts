@@ -19,11 +19,16 @@ export type Schema = {
     id: string;
     type: Schema['ProductType'];
   };
-  'ProductType': | 'T_SHIRT'| 'BACKPACK'| 'HAT';
+  'ProductType': | 'BACKPACK'| 'HAT'| 'T_SHIRT';
   'Query': {
     __typename?: 'Query';
     product?: Schema['Product'];
     products?: Array<Schema['Product']>;
+  };
+  'Review': {
+    __typename?: 'Review';
+    id: string;
+    product?: Schema['Product'];
   };
 };
 
@@ -32,5 +37,6 @@ import { ResolverFn } from '@grafbase/sdk'
 export type Resolver = {
   'Query.product': ResolverFn<Schema['Query'], { productId: string,  }, Schema['Product']>
   'Query.products': ResolverFn<Schema['Query'], {  }, Array<Schema['Product']>>
+  'Review.product': ResolverFn<Schema['Review'], {  }, Schema['Product']>
 }
 

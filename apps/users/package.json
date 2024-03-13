@@ -1,11 +1,11 @@
 {
-  "name": "@fed-demo/products",
+  "name": "@fed-demo/users",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "grafbase dev --port 4001",
+    "dev": "grafbase dev --port 4003",
     "start": "grafbase start",
-    "publish:dev": "grafbase publish --dev --name fed-demo-products --url http://localhost:4001/graphql"
+    "publish:dev": "grafbase publish --dev --name fed-demo-users --url http://localhost:4003/graphql"
   },
   "devDependencies": {
     "@grafbase/sdk": "^0.18.0",

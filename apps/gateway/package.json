@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "grafbase dev --port 4101",
+    "dev": "grafbase dev --port 4000",
     "start": "grafbase start"
+  },
+  "devDependencies": {
+    "@grafbase/sdk": "^0.18.0",
+    "grafbase": "^0.58.0"
   }
 }
