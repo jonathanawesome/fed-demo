@@ -4,20 +4,6 @@ const g = graph.Standalone({ subgraph: true });
 
 const productTypeEnum = g.enum('ProductType', ['BACKPACK', 'HAT', 'T_SHIRT']);
 
-// const review = g
-//   .type('Review', {
-//     content: g.string(),
-//     id: scalar.id(),
-//     rating: g.enumRef(ratingEnum),
-//     // product: g.ref(product),
-//   })
-//   .key('id');
-
-// g.type('Product', {
-//   id: scalar.id(),
-//   reviews: g.ref(review).list().resolver('reviewsByProduct'),
-// }).key('id');
-
 const product = g
   .type('Product', {
     description: g.string(),

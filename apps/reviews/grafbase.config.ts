@@ -19,10 +19,12 @@ const review = g
   })
   .key('id');
 
-g.type('Product', {
-  id: g.id(),
-  reviews: g.ref(review).list().resolver('reviewsByProduct'),
-}).key('id');
+const product = g
+  .type('Product', {
+    id: g.id(),
+    reviews: g.ref(review).list().resolver('reviewsByProduct'),
+  })
+  .key('id');
 
 g.query('review', {
   args: { reviewId: g.id() },
