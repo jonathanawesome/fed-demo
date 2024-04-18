@@ -8,7 +8,6 @@
     "publish:dev": "grafbase publish --dev --name fed-demo-reviews --url http://localhost:4002/graphql"
   },
   "devDependencies": {
-    "@grafbase/sdk": "^0.18.0",
-    "grafbase": "^0.58.0"
+    "@grafbase/sdk": "^0.21.0"
   }
 }

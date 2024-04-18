@@ -21,6 +21,4 @@ const tShirt: ProductsSchema['Product'] = {
   type: 'T_SHIRT',
 };
 
-const productsData: ProductsSchema['Product'][] = [backpack, hat, tShirt];
-
-export { backpack, hat, productsData, tShirt };
+export const productsData: ProductsSchema['Product'][] = [backpack, hat, tShirt];

@@ -7,7 +7,6 @@
     "start": "grafbase start"
   },
   "devDependencies": {
-    "@grafbase/sdk": "^0.18.0",
-    "grafbase": "^0.58.0"
+    "@grafbase/sdk": "^0.21.0"
   }
 }

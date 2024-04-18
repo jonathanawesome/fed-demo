@@ -19,6 +19,8 @@ export type Schema = {
   };
   'Query': {
     __typename?: 'Query';
+    hello?: string;
+    goodbye?: string;
     review?: Schema['Review'];
     reviews?: Array<Schema['Review']>;
     reviewsByProduct?: Array<Schema['Review']>;
@@ -36,6 +38,8 @@ import { ResolverFn } from '@grafbase/sdk'
 
 export type Resolver = {
   'Product.reviews': ResolverFn<Schema['Product'], {  }, Array<Schema['Review']>>
+  'Query.hello': ResolverFn<Schema['Query'], { name: string | null,  }, string>
+  'Query.goodbye': ResolverFn<Schema['Query'], { name: string | null,  }, string>
   'Query.review': ResolverFn<Schema['Query'], { reviewId: string,  }, Schema['Review']>
   'Query.reviews': ResolverFn<Schema['Query'], {  }, Array<Schema['Review']>>
   'Query.reviewsByProduct': ResolverFn<Schema['Query'], { productId: string,  }, Array<Schema['Review']>>
