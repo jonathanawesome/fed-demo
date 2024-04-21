@@ -1,5 +1,7 @@
 import { config, graph } from '@grafbase/sdk';
 
+// a cool comment
+
 const g = graph.Standalone({ subgraph: true });
 
 const productTypeEnum = g.enum('ProductType', ['BACKPACK', 'HAT', 'T_SHIRT']);
