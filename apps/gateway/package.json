@@ -6,7 +6,7 @@
     "dev": "grafbase dev --port 4000",
     "start": "grafbase start"
   },
-  "devDependencies": {
-    "@grafbase/sdk": "^0.21.0"
+  "dependencies": {
+    "@grafbase/sdk": "^0.24.0"
   }
 }
