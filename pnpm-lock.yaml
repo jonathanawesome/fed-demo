@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
@@ -13,51 +13,57 @@ importers:
         version: 3.2.5
 
   apps/gateway:
-    devDependencies:
+    dependencies:
       '@grafbase/sdk':
-        specifier: ^0.21.0
-        version: 0.21.0
+        specifier: ^0.24.0
+        version: 0.24.0
 
   apps/products:
     devDependencies:
       '@grafbase/sdk':
-        specifier: ^0.21.0
-        version: 0.21.0
+        specifier: ^0.24.0
+        version: 0.24.0
 
   apps/reviews:
     devDependencies:
       '@grafbase/sdk':
-        specifier: ^0.21.0
-        version: 0.21.0
+        specifier: ^0.24.0
+        version: 0.24.0
 
   apps/users:
     devDependencies:
       '@grafbase/sdk':
-        specifier: ^0.21.0
-        version: 0.21.0
+        specifier: ^0.24.0
+        version: 0.24.0
 
 packages:
 
-  /@grafbase/sdk@0.21.0:
-    resolution: {integrity: sha512-X1aZ4vJq6+FwarCUzQVvf2e5rGXexESdtAvBNW2MHawNL6xrSIH4CpmuRMPI/2XDEGwlDlpet4n61ZFrr3K8iQ==}
+  '@grafbase/sdk@0.24.0':
+    resolution: {integrity: sha512-45SE8CWVqZ0HUdQCrNZ/mlpSIheMYlXmpjwVm2/o0H7aUU+3STaCKtByTEOc109tI+3DUSpNy2ZWMP3HMD0NZg==}
     engines: {node: '>=16.13.0'}
-    dependencies:
-      dotenv: 16.4.5
-      type-fest: 4.12.0
-    dev: true
 
-  /dotenv@16.4.5:
+  dotenv@16.4.5:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
     engines: {node: '>=12'}
-    dev: true
 
-  /prettier@3.2.5:
+  prettier@3.2.5:
     resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
     engines: {node: '>=14'}
     hasBin: true
-    dev: true
 
-  /type-fest@4.12.0:
+  type-fest@4.12.0:
     resolution: {integrity: sha512-5Y2/pp2wtJk8o08G0CMkuFPCO354FGwk/vbidxrdhRGZfd0tFnb4Qb8anp9XxXriwBgVPjdWbKpGl4J9lJY2jQ==}
     engines: {node: '>=16'}
-    dev: true
+
+snapshots:
+
+  '@grafbase/sdk@0.24.0':
+    dependencies:
+      dotenv: 16.4.5
+      type-fest: 4.12.0
+
+  dotenv@16.4.5: {}
+
+  prettier@3.2.5: {}
+
+  type-fest@4.12.0: {}
