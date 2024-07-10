@@ -24,11 +24,24 @@ export type Schema = {
     __typename?: 'Query';
     product?: Schema['Product'];
     products?: Array<Schema['Product']>;
+    _service?: Schema['_Service'];
+    _entities?: Array<Schema['_Entity'] | null>;
   };
   'Review': {
     __typename?: 'Review';
     id: string;
     product?: Schema['Product'];
+  };
+  /**
+   * Any scalar (For [Apollo Federation](https://www.apollographql.com/docs/apollo-server/federation/introduction))
+   * 
+   * The `Any` scalar is used to pass representations of entities from external services into the root `_entities` field for execution.
+   */
+  '_Any': any;
+  '_Entity': | Schema['Product'] | Schema['Review'];
+  '_Service': {
+    __typename?: '_Service';
+    sdl: string | null;
   };
 };
 

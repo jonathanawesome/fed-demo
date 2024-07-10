@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "grafbase dev --port 4001",
+    "dev": "doppler run -- npx grafbase@0.73.0 dev --port 4001",
     "start": "grafbase start",
-    "publish:dev": "grafbase publish --dev --name fed-demo-products --url http://localhost:4001/graphql"
+    "publish:dev": "gbdev publish --dev --name fed-demo-products --url http://localhost:4001/graphql",
+    "publish:prod": "grafbase publish --name fed-demo-products --schema .grafbase/generated/schemas/schema.graphql --url http://localhost:4001/graphql test-org/fed-demo-gateway"
   },
   "devDependencies": {
-    "@grafbase/sdk": "^0.24.0"
+    "@grafbase/sdk": "^0.26.0",
+    "@types/node": "^20.14.10"
   }
 }

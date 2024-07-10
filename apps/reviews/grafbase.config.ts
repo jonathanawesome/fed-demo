@@ -47,7 +47,7 @@ export default config({
       rules.public();
     },
   },
-  experimental: {
-    codegen: true,
+  codegen: {
+    enabled: true,
   },
 });

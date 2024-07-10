@@ -15,32 +15,38 @@ importers:
   apps/gateway:
     dependencies:
       '@grafbase/sdk':
-        specifier: ^0.24.0
-        version: 0.24.0
+        specifier: ^0.26.0
+        version: 0.26.0
 
   apps/products:
     devDependencies:
       '@grafbase/sdk':
-        specifier: ^0.24.0
-        version: 0.24.0
+        specifier: ^0.26.0
+        version: 0.26.0
+      '@types/node':
+        specifier: ^20.14.10
+        version: 20.14.10
 
   apps/reviews:
     devDependencies:
       '@grafbase/sdk':
-        specifier: ^0.24.0
-        version: 0.24.0
+        specifier: ^0.26.0
+        version: 0.26.0
 
   apps/users:
     devDependencies:
       '@grafbase/sdk':
-        specifier: ^0.24.0
-        version: 0.24.0
+        specifier: ^0.26.0
+        version: 0.26.0
 
 packages:
 
-  '@grafbase/sdk@0.24.0':
-    resolution: {integrity: sha512-45SE8CWVqZ0HUdQCrNZ/mlpSIheMYlXmpjwVm2/o0H7aUU+3STaCKtByTEOc109tI+3DUSpNy2ZWMP3HMD0NZg==}
+  '@grafbase/sdk@0.26.0':
+    resolution: {integrity: sha512-eVkfr9HwkZA3f8YsQLv6Fzsvgn1Iz/1cetD9U78d2DpJdihsQ5jV+8A4Io3QGdyfkkVCN9UeGfPl2jhUqQb3og==}
     engines: {node: '>=16.13.0'}
+
+  '@types/node@20.14.10':
+    resolution: {integrity: sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==}
 
   dotenv@16.4.5:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
@@ -55,15 +61,24 @@ packages:
     resolution: {integrity: sha512-5Y2/pp2wtJk8o08G0CMkuFPCO354FGwk/vbidxrdhRGZfd0tFnb4Qb8anp9XxXriwBgVPjdWbKpGl4J9lJY2jQ==}
     engines: {node: '>=16'}
 
+  undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
 snapshots:
 
-  '@grafbase/sdk@0.24.0':
+  '@grafbase/sdk@0.26.0':
     dependencies:
       dotenv: 16.4.5
       type-fest: 4.12.0
+
+  '@types/node@20.14.10':
+    dependencies:
+      undici-types: 5.26.5
 
   dotenv@16.4.5: {}
 
   prettier@3.2.5: {}
 
   type-fest@4.12.0: {}
+
+  undici-types@5.26.5: {}

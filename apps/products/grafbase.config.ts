@@ -31,12 +31,15 @@ g.query('products', {
 
 export default config({
   graph: g,
-  auth: {
-    rules: (rules) => {
-      rules.public();
-    },
-  },
-  experimental: {
-    codegen: true,
-  },
+  // auth: {
+  //   rules: (rules) => {
+  //     rules.public();
+  //   },
+  // },
+  // codegen: {
+  //   enabled: true,
+  // },
+  // experimental: {
+  //   runtime: 'nodejs',
+  // },
 });

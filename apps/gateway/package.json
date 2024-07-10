@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "grafbase dev --port 4000",
+    "dev": "npx grafbase@0.73.0 dev --port 4000",
     "start": "grafbase start"
   },
   "dependencies": {
-    "@grafbase/sdk": "^0.24.0"
+    "@grafbase/sdk": "^0.26.0"
   }
 }

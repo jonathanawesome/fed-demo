@@ -5,7 +5,7 @@
     "dev": "pnpm -r dev"
   },
   "engines": {
-    "node": "18.x",
+    "node": "20.x",
     "pnpm": "^9"
   },
   "devDependencies": {
